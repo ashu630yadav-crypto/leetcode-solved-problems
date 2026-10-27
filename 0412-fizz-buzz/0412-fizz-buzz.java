@@ -1,31 +1,26 @@
 class Solution {
-    public List<String> fizzBuzz(int n) {
+    public List<String> fizzBuzz(int n) 
+    {
         
-        String[] answer = new String[n];
+        List<String> answer = new ArrayList<>();
 
-        for(int i = 1 ; i <= n ; i++)
+        for(int i =1; i<=n ; i++)
         {
-            if(i%3==0 && i%5==0)
+            if(i%3==0 && i%5==0 )
             {
-               answer[i-1]="FizzBuzz";
+                answer.add ("FizzBuzz");
             }
-            else if(i%3==0 )
+            else if(i%3==0)
             {
-               answer[i-1]="Fizz";
-            }   
-
-            else if( i%5==0)
-            {
-                 answer[i-1]="Buzz";
+                answer.add("Fizz");
             }
-              
-
+            else if(i%5==0)
+            {
+                answer.add("Buzz");
+            }
             else
-            {
-                  answer[i-1]= String.valueOf(i); 
-            }
-                 
+                answer.add(String.valueOf(i));
         }
-        return Arrays.asList(answer);
+        return answer;
     }
 }
